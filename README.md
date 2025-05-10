@@ -9,6 +9,25 @@ Bottom-up SLR(1) parser for a C like language.
 - Construction of SLR(1) parsing table
 - Parser implementation including parse-tree generation and error reporting
 
+## Project Parsing Flow
+
+```
+                                          Parser
+                    ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+                    ┃ ┌───────┐                                     ┃
+                    ┃ │ CFG G │                                     ┃
+                    ┃ └───┬───┘                                     ┃
+┌────────────────┐  ┃     V      yes  ┌────────────┐ Efficient Form ┃  ┌───────────────────────┐
+│ Token Stream α ├─>┃ α ∈ L(G)? ─────>│ Parse Tree ├────────────────╂─>│ Abstract Styntax Tree │
+└────────────────┘  ┃     │           └────────────┘                ┃  └───────────────────────┘
+                    ┃     │ no                                      ┃
+                    ┃     │                                         ┃
+                    ┗━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+                          │
+                          V
+                     Error Report
+```
+
 ## Ambiguous Grammar Specification
 
 ```
