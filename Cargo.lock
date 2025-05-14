@@ -3,5 +3,17 @@
 version = 4
 
 [[package]]
-name = "Bottom-up-SLR-Parser"
+name = "cli"
+version = "0.1.0"
+
+[[package]]
+name = "interpreter"
+version = "0.1.0"
+
+[[package]]
+name = "lexer"
+version = "0.1.0"
+
+[[package]]
+name = "parser"
 version = "0.1.0"

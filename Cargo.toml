@@ -1,7 +1,3 @@
-[package]
-name = "Bottom-up-SLR-Parser"
-version = "0.1.0"
-edition = "2024"
-authors = ["Nicolas Spijkerman <nicospijke@gmail.com>"]
-description = "Bottom-up SLR(1) parser for a C like language."
-license-file = "LICENSE"
+[workspace]
+resolver = "3"
+members = ["core/lexer", "core/parser", "core/interpreter", "cli"]

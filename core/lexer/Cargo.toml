@@ -1,0 +1,7 @@
+[package]
+name = "lexer"
+version = "0.1.0"
+edition = "2024"
+license-file = "LICENSE"
+authors = ["Nicolas Spijkerman <nicospijke@gmail.com>"]
+description = "Bottom-up SLR(1) Parser and Interpreter for a C-like language defined using Backus-Naur Form notation."
